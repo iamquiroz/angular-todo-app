@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgModule } from '@angular/core';
 import { Todo } from './todo';
 // Import class so we can use it as dependency 
 //  injection token in the constructor
@@ -9,10 +8,29 @@ import {TodoDataService} from './todo-data.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
-  providers: [TodoDataService]
+  providers: [TodoDataService],
+
+
 })
+
+/*
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+*/
+
 export class AppComponent {
-  title = 'todo-app';
+  title = 'app works!';
 
   newTodo: Todo = new Todo();
 
